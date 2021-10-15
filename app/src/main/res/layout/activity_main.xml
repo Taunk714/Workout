@@ -12,10 +12,11 @@
     tools:context="com.example.sse.accelerometertesting.MainActivity">
 
     <TextView
-        android:id="@+id/tvDeltaX"
+        android:id="@+id/steps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_marginBottom="112dp"
+        android:hint="# of steps"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,19 +26,20 @@
         android:id="@+id/start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="61dp"
-        tools:layout_editor_absoluteY="230dp" />
+        android:text="Start"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="341dp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/stop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="264dp"
-        tools:layout_editor_absoluteY="251dp" />
+        android:text="Stop"
+        tools:layout_editor_absoluteX="239dp"
+        tools:layout_editor_absoluteY="357dp" />
 
     <ListView
+        android:id="@+id/workout"
         android:layout_width="409dp"
         android:layout_height="244dp"
         tools:layout_editor_absoluteX="1dp"
