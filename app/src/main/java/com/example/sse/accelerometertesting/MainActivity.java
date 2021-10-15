@@ -2,10 +2,12 @@ package com.example.sse.accelerometertesting;
 
 import android.content.Context;
 //import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraManager;
+import android.os.Build;
 import android.os.Bundle;
 
 //Imports for hardware sensors
@@ -73,28 +75,28 @@ public class MainActivity extends AppCompatActivity {
         //     setHasOptionsMenu(true);   //this lets the compiler know there are menu items
 
         tvDeltaX = (TextView) findViewById(R.id.steps);
-        tvDeltaY = (TextView) findViewById(R.id.tvDeltaY);
-        tvDeltaZ = (TextView) findViewById(R.id.tvDeltaZ);
-
-        seekBar = (SeekBar)findViewById(R.id.seekBar);
-
-        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                SIGNIFICANT_SHAKE = progress;
-                Log.e(TAG, "New SIG SHAKE = " + progress);
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
+//        tvDeltaY = (TextView) findViewById(R.id.tvDeltaY);
+//        tvDeltaZ = (TextView) findViewById(R.id.tvDeltaZ);
+//
+//        seekBar = (SeekBar)findViewById(R.id.seekBar);
+//
+//        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//            @Override
+//            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+//                SIGNIFICANT_SHAKE = progress;
+//                Log.e(TAG, "New SIG SHAKE = " + progress);
+//            }
+//
+//            @Override
+//            public void onStartTrackingTouch(SeekBar seekBar) {
+//
+//            }
+//
+//            @Override
+//            public void onStopTrackingTouch(SeekBar seekBar) {
+//
+//            }
+//        });
     }
 
     @Override
@@ -251,6 +253,7 @@ public class MainActivity extends AppCompatActivity {
 //    }
 
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     public void LightOn()
     {
         try {
@@ -260,6 +263,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     public void LightOff()
     {
         try {
